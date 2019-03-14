@@ -1,4 +1,5 @@
 {
+  "proxy": "http://localhost:8080",
   "name": "fibonacci-client",
   "version": "0.1.0",
   "private": true,
@@ -7,7 +8,6 @@
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8"
   },
-  "proxy": "http://localhost:8080",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
