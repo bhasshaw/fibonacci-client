@@ -4,11 +4,11 @@ import './results.css';
 const Results = ({ results }) => {
 
     let numbers = results.map((number, i) => (
-        <div key={i}>{number}</div>
+        <div className="number-text" key={i}>{number}</div>
     ));
 
     return (
-        <div>
+        <div className="numbers-container">
             {numbers}
         </div>
     );
