@@ -1,22 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Form from './components/form';
+import Results from './components/results';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      results: []
+        results: []
     };
-}
-  render() {
-    return (
-      <div className="App">
-        <header><h1>Fibonacci</h1></header>
-        <main></main>
-      </div>
-    );
   }
+
+handleResults = results => {
+    this.setState({ results });
+}
+
+render() {
+    return (
+        <div>
+            <header>
+                <h2>Fibonacci</h2>
+            </header>
+            <main>
+                <Form handleResults={this.handleResults} />
+                <Results results={this.state.results} />
+            </main>
+        </div >
+    );
+}
 }
 
 export default App;
