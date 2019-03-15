@@ -1,0 +1,36 @@
+.form {
+    text-align: center;
+}
+
+.input {
+    height: 50px;
+    width: 200px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.button-container button {
+    height: 50px;
+    width: 100px;
+    font-size: 30px;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+#up {
+    margin-right: 5px;
+    color: blue;
+}
+
+#down {
+    margin-left: 5px;
+    color: red;
+}
+
+.submit-button {
+    font-size: 25px;
+    height: 50px;
+    width: 205px;
+    margin-top: 25px;
+    border-radius: 5px;
+}

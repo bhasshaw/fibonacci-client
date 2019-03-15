@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './form.css';
 
 class Form extends Component {
     constructor(props) {
@@ -28,11 +29,6 @@ class Form extends Component {
         }
     }
 
-    change = (e) => {
-        let enteredValue = parseInt(e.target.value, 10);
-        this.setState({ input: enteredValue })
-    }
-
     submit = (e) => {
         e.preventDefault();
         return fetch(`http://localhost:3000/api/fibonacci/${this.state.input}`, {
@@ -49,14 +45,25 @@ class Form extends Component {
         });
     }
 
+    change = (e) => {
+        let enteredValue = parseInt(e.target.value, 10);
+        this.setState({ input: enteredValue })
+    }
+
     render() {
         return (
             <form onSubmit={this.submit}>
+                <div className="form">
                     <p>{this.state.error}</p>
-                    <input id="input" name="input" type="text" min={0} onChange={this.change} value={this.state.input} />
-                    <button type="button" onClick={this.increment}>+</button>
-                    <button type="button" onClick={this.decrement}>-</button>
-                    <button type="submit">Submit</button>
+                    <div>
+                        <input className="input" id="input" name="input" type="text" min={0} onChange={this.change} value={this.state.input} />
+                    </div>
+                    <div className="button-container">
+                        <button id="up" type="button" onClick={this.increment}>+</button>
+                        <button id="down" type="button" onClick={this.decrement}>-</button>
+                    </div>
+                    <button className="submit-button" type="submit">Submit</button>
+                </div>
             </form>
         );
     }
